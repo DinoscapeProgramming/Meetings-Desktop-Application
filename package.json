@@ -1,0 +1,65 @@
+{
+  "name": "zoom",
+  "version": "1.0.0",
+  "description": "A WebRTC Clone of Zoom with lots of features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "test_nucleus"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-nucleus",
+          "config": {
+            "host": "https://nucleus.myserver.com",
+            "appId": "1",
+            "channelId": "mychannelid",
+            "token": "mytoken"
+          }
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.3",
+    "electron": "^21.3.0"
+  },
+  "dependencies": {
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
+    "@electron-forge/publisher-nucleus": "^6.0.3",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
