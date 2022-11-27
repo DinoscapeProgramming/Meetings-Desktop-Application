@@ -8,7 +8,7 @@ function createWindow() {
     width: 800,
     height: 600,
     title: "Zoom",
-    icon: path.join(__dirname, "favicon.png"),
+    icon: path.join(__dirname, "icons/favicon.png"),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
