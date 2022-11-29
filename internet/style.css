@@ -1,0 +1,25 @@
+html {
+  font-family: Montserrat, "Noto Sans Arabic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #2d8cff;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 225px;
+}
+
+.errorMessage {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.errorImage {
+  display: block;
+  width: 500px;
+  margin: auto;
+}
